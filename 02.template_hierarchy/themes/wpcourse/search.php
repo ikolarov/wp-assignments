@@ -1,0 +1,1 @@
+Search results for: <?php echo get_search_query(); ?>

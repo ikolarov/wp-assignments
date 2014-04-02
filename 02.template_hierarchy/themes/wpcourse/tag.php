@@ -1,0 +1,1 @@
+Posts tagged: <?php the_tags(); ?>
