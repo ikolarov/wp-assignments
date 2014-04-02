@@ -1,17 +1,18 @@
+<?php /*
+* Template Name: Template Contact
+* Description: Contact custom page.
+*/ ?>
 <?php get_header(); ?>
 
-<?php get_search_form(); ?>
-
-<h1 class="page-title"><?php printf( __( 'Search results for: %s', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-
+<h2>This is template for Contact.</h2>
 <?php if(have_posts()) : ?>
 	<?php while(have_posts()): ?>
 		<?php the_post(); ?>
-		<h2>
+		<h1>
 			<a href="<?php the_permalink(); ?>" title="<?php sprintf( __( 'Permanent Link to %s', 'theme-name' ), the_title_attribute( 'echo=0' ) ); ?>">
 				<?php the_title(); ?>
 			</a>
-		</h2>
+		</h1>
 		in <strong><?php the_category(','); ?></strong>
 		<?php the_tags('Posts tagged: ', ', ', '<br />'); ?> 
 		<?php _e('Posted '); ?> by <?php the_author(); ?> at
@@ -20,8 +21,8 @@
 		<? comments_template(); ?>  
 		<br />
 	<?php endwhile; ?>
-<?php else : ?>
-	<?php get_template_part( 'no-results', 'search' ); ?>
+<?php else: ?>
+	No page found.
 <?php endif; ?>
 
 <?php get_footer(); ?>
