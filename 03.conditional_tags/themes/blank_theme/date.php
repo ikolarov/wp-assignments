@@ -1,15 +1,11 @@
 <h1>
 	<?php if ( is_date() ): ?>
-		<?php if ( get_the_time('Y') === '2013' ): ?>
-			<?php if ( get_the_time('n') === '5' ): ?>
-				<?php if ( get_the_time('j') === '24' ): ?>
-					Posts in 24 May, 2013
-				<?php else: ?>
-					Posts in May, 2013
-				<?php endif; ?>
-			<?php else: ?>
-				Posts in 2013
-			<?php endif; ?>
+		<?php if ( is_year() ): ?>
+			Posts in <?php _e(get_the_time('Y')); ?>
+		<?php elseif ( is_month() ): ?>
+			Posts in <?php _e(get_the_time('M Y')); ?>
+		<?php elseif ( is_day() ): ?>
+			Posts in <?php _e(get_the_time('j M Y')); ?>
 		<?php endif; ?>
 	<?php endif; ?>
 </h1>
