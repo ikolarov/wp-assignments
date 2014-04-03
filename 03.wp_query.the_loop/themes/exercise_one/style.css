@@ -1,0 +1,8 @@
+/*
+Theme Name: Template WP Query, The Loop
+*/
+
+* { padding: 0; margin: 0; border: 0; outline: none; }
+.posts-container { border-bottom: 1px solid  #000; padding: 20px; }
+.post { padding-left: 10px; }
+.post-content { padding: 0 0 20px 10px; }
