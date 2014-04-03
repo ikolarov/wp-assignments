@@ -4,9 +4,9 @@
 <?php elseif(is_single()): ?>
 	<h2>Post-title: <?php the_title(); ?></h2>
 <?php elseif(is_category()): ?>
-	<p>Categories:</p>
+	<p>Categories: </p>
 <?php elseif(is_tag()): ?>
-	<p>Tags:</p>
+	<p>Tags: </p>
 <?php elseif(is_author()): ?>
 	<p>Author: <?php the_author(); ?></p>
 <?php elseif(is_day()): ?>
