@@ -1,0 +1,1 @@
+<h4><?php the_tags('Posts tagged: '); ?></h4>
