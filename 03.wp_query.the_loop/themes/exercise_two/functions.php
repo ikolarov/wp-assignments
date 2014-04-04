@@ -25,9 +25,9 @@ function exercise_one_print_posts( $query_vars ) {
 				<!-- Заглавие (то трябва и да е линк към страницата с детайлен изглед на конкретния пост) -->
 				<h3>
 					<a href="<?php the_permalink(); ?>">
-						<?php if ( has_category('News') ) { echo '!'; } ?>
 						<?php if ( has_tag('website') ) { echo 'Web: '; } ?>
 						<?php echo exercise_one_get_the_title(); ?>
+						<?php if ( has_category('News') ) { echo '!'; } ?>
 					</a>
 				</h3>
 				<small>

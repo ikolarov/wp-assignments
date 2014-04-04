@@ -13,6 +13,9 @@
 			get_term_by('slug', 'events', 'category')->term_id,
 		);
 
+
+		$today = getdate();
+		
 		$latest_five_posts = array(
 			'category__in' => $exercise_two_category_ids,
 			'year' => $today["year"],
