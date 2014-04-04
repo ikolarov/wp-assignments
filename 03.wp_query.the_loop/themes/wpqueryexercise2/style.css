@@ -1,0 +1,8 @@
+/*
+Template Name: WP Query Exercise 2
+*/
+
+.post { border-bottom: 1px solid #bbb; border-top: 1px solid #bbb; margin-bottom: 20px; background: #ddd; }
+.post-alt { background: #eee; }
+.post:first-child { border-top: none; }
+.post:last-child { border-bottom: none; margin-bottom: 0; }
