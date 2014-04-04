@@ -1,0 +1,9 @@
+/*
+Theme Name: LoopTwo
+*/
+* { margin: 0; padding: 0; outline: 0; }
+.post { background: #eee;  border-bottom: 3px solid #fbb; margin-bottom: 20px; border-top: 5px solid  #bbb; }
+.post-odd { background: #ddd; }
+.post:first-child { border-top: none;  }
+.post:last-child { border-bottom: none; }
+
