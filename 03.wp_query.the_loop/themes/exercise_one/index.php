@@ -76,15 +76,35 @@
 	<div class="posts-container">
 		<h2>Всички постове, които са в категория News и НЕ са в категория Blog, подредени в произволен ред</h2>
 		<?php 
-		$exercise_one_blog_id = get_term_by('slug', 'blog', 'category');
-		$exercise_one_blog_id = array($exercise_one_blog_id->term_id);
+		// $exercise_one_blog_id = get_term_by('slug', 'blog', 'category');
+		// $exercise_one_blog_id = array($exercise_one_blog_id->term_id);
+
+		// $cat_news_notcat_blog_posts_sort_random = array(
+		// 	'posts_per_page' => -1,
+		// 	'category_name' => 'news',
+		// 	'category__not_in' => $exercise_one_blog_id,
+		// 	'orderby' => 'rand',
+		// );
 
 		$cat_news_notcat_blog_posts_sort_random = array(
 			'posts_per_page' => -1,
-			'category_name' => 'news',
-			'category__not_in' => $exercise_one_blog_id,
+			'tax_query' => array (
+				'relation' => 'AND',
+				array (
+					'taxonomy' => 'category',
+					'field' => 'slug',
+					'terms' => 'news',
+				),
+				array (
+					'taxonomy' => 'category',
+					'field' => 'slug',
+					'terms' => array ( 'slug', 'blog', 'category' ),
+					'operator' => 'NOT IN',
+				),
+			),
 			'orderby' => 'rand',
-		); ?>
+		);
+		 ?>
 		<?php exercise_one_print_posts($cat_news_notcat_blog_posts_sort_random); ?>
 	</div><!-- /.posts-container -->
 </body>
