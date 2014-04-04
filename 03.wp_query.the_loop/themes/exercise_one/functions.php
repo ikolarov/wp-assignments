@@ -16,6 +16,7 @@ function exercise_one_print_posts( $posts_array ) {
 						<?php the_title(); ?>
 					</a>
 				</h3>
+				
 				<small>
 					<!-- Дата на публикуване -->
 					Posted on: <?php the_time("F j, Y"); ?>

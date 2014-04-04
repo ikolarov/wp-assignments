@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-<body <?php body_class($class); ?>>
 	<div class="posts-container">
 		<h2>Най-новите 5 поста</h2>
 		<?php exercise_one_print_posts(array('posts_per_page' => 5)); ?>
@@ -105,6 +104,4 @@
 		));
 		?>
 	</div><!-- /.posts-container -->
-</body>
-
 <?php get_footer(); ?>
