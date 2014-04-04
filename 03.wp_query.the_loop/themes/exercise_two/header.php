@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<title><?php echo wp_title('&raquo;', false) ? wp_title() : 'No Title'; ?></title>
+	<title><?php echo get_bloginfo( 'name' ); ?><?php wp_title( '&raquo; ', true, 'left' ); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
